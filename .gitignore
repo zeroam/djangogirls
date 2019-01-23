@@ -2,3 +2,4 @@ girlsenv/
 __pycache__
 .vscode/
 */migrations/
+db.sqlite3
