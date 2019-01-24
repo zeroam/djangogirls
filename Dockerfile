@@ -6,8 +6,6 @@ WORKDIR /app
 ADD ./requirements.txt /app/
 RUN pip install -r requirements.txt
 
-ADD ./mysite /app/mysite/
-ADD ./blog /app/blog/
 ADD ./manage.py /app/
 
 CMD ["python", "manage.py", "runserver", "0:8000"]
