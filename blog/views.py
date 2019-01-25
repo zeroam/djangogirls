@@ -5,15 +5,8 @@ from .forms import PostForm, CommentForm
 from django.contrib.auth.decorators import login_required
 
 def post_list(request):
-    print('test1')
-    try:
-        posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-        print('success')
-    except:
-        posts = None
-        print('failed')
-    print('test2')
-    print(type(posts))
+    print('hello')
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'blog/post_list.html', {'posts': posts})
 
 
